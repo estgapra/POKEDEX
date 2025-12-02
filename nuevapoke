@@ -1,6 +1,6 @@
 // nueva clase
 
-abstract class Instrumentos {
+export abstract class Instrumentos {
     public nombre: string;
 
     constructor(nombre: string) {
@@ -19,7 +19,7 @@ abstract class Instrumentos {
 }
 
 
-class Guitarra extends Instrumentos {
+export class Guitarra extends Instrumentos {
     private tipo: string;
 
     constructor(nombre: string, tipo: string) {
@@ -39,7 +39,7 @@ class Guitarra extends Instrumentos {
 
 
 
-class violin extends Instrumentos {
+export class violin extends Instrumentos {
     private tipo: string;
 
     constructor(nombre: string, tipo: string) {
