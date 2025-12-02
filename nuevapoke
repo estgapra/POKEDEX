@@ -1,0 +1,65 @@
+// nueva clase
+
+abstract class Instrumentos {
+    public nombre: string;
+
+    constructor(nombre: string) {
+        this.nombre = nombre;
+    }
+
+    abstract hacerSonido(): void;
+    abstract tocar(): void;
+
+    getNombre(): string {
+        return this.nombre;
+    }
+    setNombre(nombre: string): void {
+        this.nombre = nombre;
+    }
+}
+
+
+class Guitarra extends Instrumentos {
+    private tipo: string;
+
+    constructor(nombre: string, tipo: string) {
+        super(nombre);
+        this.tipo = tipo;
+    }
+    hacerSonido(): void {
+        console.log(`La guitarra ${this.getNombre()} suena: Strum Strum!`);
+
+
+    }
+
+    tocar(): void {
+        console.log(`Estás tocando la guitarra ${this.getNombre()} de tipo ${this.tipo}.`);
+    }
+}
+
+
+
+class violin extends Instrumentos {
+    private tipo: string;
+
+    constructor(nombre: string, tipo: string) {
+        super(nombre);
+        this.tipo = tipo;
+    }
+
+    hacerSonido(): void {
+        console.log(`${this.getNombre()} suena: Screech Screech!`);
+    }
+
+    tocar(): void {
+        console.log(`Estás tocando el violín ${this.getNombre()} de tipo ${this.tipo}.`);
+
+    
+    }
+    getNombre(): string {
+        return this.nombre;
+    }
+    setNombre(nombre: string): void {
+        this.nombre = nombre;
+    }
+}
