@@ -1,4 +1,4 @@
-abstract class comida {
+export abstract class comida {
     protected nombre: string;
 
     constructor(nombre: string){
@@ -20,7 +20,7 @@ abstract class comida {
     }
 
 }
-class pizza extends comida {
+export class pizza extends comida {
     private ingredientes: string;
     
     constructor(nombre: string, ingredientes: string){
@@ -40,7 +40,7 @@ class pizza extends comida {
         this.ingredientes = ingredientes;
     }
 }
-class hamburguesa extends comida {
+export class hamburguesa extends comida {
     private tipo: string;
     
     constructor(nombre: string, tipo: string){
@@ -60,7 +60,3 @@ class hamburguesa extends comida {
         this.tipo = tipo;
     }
 }
-
-
-
-//lo que dma
